@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Ugly Facebook",
+  "version": "1.0",
+  "description": "Mess up Facebook's CSS to make it ugly.",
+  "permissions": ["tabs", "scripting"],
+  "host_permissions": ["*://www.facebook.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

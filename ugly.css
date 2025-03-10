@@ -1,0 +1,22 @@
+* {
+    font-family: Comic Sans MS, Papyrus, cursive !important;
+    background: repeating-linear-gradient(45deg, red, yellow, lime, cyan, blue, magenta, red) !important;
+    color: lime !important;
+    text-transform: uppercase !important;
+    font-size: 30px !important;
+}
+
+body {
+    filter: invert(1) hue-rotate(180deg) !important;
+}
+
+img {
+    transform: rotate(180deg) !important;
+    filter: grayscale(100%) contrast(200%) !important;
+}
+
+button, input, textarea {
+    background: hotpink !important;
+    color: yellow !important;
+    border: 5px solid lime !important;
+}
