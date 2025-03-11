@@ -16,15 +16,6 @@ function hideImagesAndWrappers() {
 // Run immediately when the script is injected
 hideImagesAndWrappers();
 
-var prevWidth = window.innerWidth;
-window.addEventListener('resize', function() {
-    var width = window.innerWidth;
-    if (width !== prevWidth) {
-        prevWidth = width;
-        hideImagesAndWrappers();
-    }
-});
-
 // Run again when the DOM updates (for dynamic content loading)
 const observer = new MutationObserver(hideImagesAndWrappers);
 observer.observe(document.body, { childList: true, subtree: true });

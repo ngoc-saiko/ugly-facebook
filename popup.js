@@ -17,3 +17,13 @@ document.getElementById("toggleImages").addEventListener("click", () => {
         });
     });
 });
+
+document.getElementById("toggleAds").addEventListener("click", () => {
+    chrome.storage.local.get("hideAds", (data) => {
+        let newState = !data.hideAds; // Toggle state
+        alert(newState ? "Hiding ads!" : "Showing ads!");
+        chrome.storage.local.set({ hideAds: newState }, () => {
+            chrome.tabs.reload(); // Reload page to apply changes
+        });
+    });
+});
